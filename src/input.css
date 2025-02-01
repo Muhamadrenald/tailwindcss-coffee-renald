@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@theme {
+  --font-family: "Poppins", sans-serif;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  /* --spacing-big: 48rem; */
+  --spacing-big: 30rem;
+
+  --animate-spin: spin-slow 3s linear infinite alternate;
+  @keyframes spin-slow {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+
+  --animate-slide: slide 1s ease-in-out infinite;
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+
+    50% {
+      transform: translateX(20px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  --animate-rotate: rotate 2s linear infinite;
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(-360deg); /* Putar ke kiri */
+    }
+  }
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Spin animation */
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin-slow {
+  @apply animate-spin;
+  animation-duration: 5s;
+}
+
+/* Move up animation */
+@keyframes move-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+.animate-move-up {
+  @apply animate-bounce;
+  animation-name: move-up;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* Move down animation */
+@keyframes move-down {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+.animate-move-down {
+  animation-name: move-down;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* Move left animation */
+@keyframes move-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
+}
+.animate-move-left {
+  animation-name: move-left;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* Move right animation */
+@keyframes move-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50px);
+  }
+}
+.animate-move-right {
+  animation-name: move-right;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+.animate-bounce {
+  @apply animate-bounce;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+/* @layer utilities {
+  @keyframes custom-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-spin {
+    animation: custom-spin 3s linear infinite; /* Durasi 3 detik (lebih lambat dari animate-spin bawaan) */
+/* }
+} */

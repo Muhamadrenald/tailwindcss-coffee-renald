@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Renald Coffee Shop</title>
+  </head>
+  <body class="font-family">
+    <!-- into section -->
+    <!-- <div
+      class="relative overflow-hidden h-1/2 lg:h-screen sm:h-screen bg-gradient-to-t from-indigo-200 dark:from-slate-800 dark:to-slate-900"
+    > -->
+
+    <nav class="fixed top-0 z-10 w-full bg-white dark:bg-slate-900">
+      <div class="container flex items-center justify-between py-5 mx-auto">
+        <div class="flex items-center gap-2">
+          <img
+            class="w-8 bg-gray-100 rounded-full"
+            src="../img/logo-r.png"
+            alt="logo-r"
+          />
+          <a href="#">
+            <span
+              class="text-2xl font-bold text-indigo-900 uppercase hover:text-indigo-300 dark:text-gray-100"
+              >renald</span
+            >
+          </a>
+        </div>
+
+        <ul
+          class="hidden space-x-10 text-sm font-bold text-gray-600 uppercase dark:text-gray-100 md:flex"
+        >
+          <li class="hover:text-indigo-300">
+            <a href="#">homepage</a>
+          </li>
+          <li class="hover:text-indigo-300">
+            <a href="#about">about us</a>
+          </li>
+          <li class="hover:text-indigo-300">
+            <a href="#services">service</a>
+          </li>
+          <li class="hover:text-indigo-300">
+            <a href="#menus">menu</a>
+          </li>
+          <li class="hover:text-indigo-300">
+            <a href="#contact">contact</a>
+          </li>
+        </ul>
+
+        <img
+          id="moon"
+          class="hidden w-5 cursor-pointer md:block"
+          src="../img/moon.png"
+          alt="moon"
+        />
+
+        <div id="hamburger" class="z-20 space-y-1 cursor-pointer md:hidden">
+          <div class="w-6 h-0.5 bg-slate-400"></div>
+          <div class="w-6 h-0.5 bg-slate-400"></div>
+          <div class="w-6 h-0.5 bg-slate-400"></div>
+        </div>
+
+        <ul
+          id="menu"
+          class="absolute top-0 left-0 hidden w-full p-10 space-y-10 text-center text-white uppercase bg-indigo-900 rounded-b-3xl md:hidden dark:bg-slate-800"
+        >
+          <li class="hover:text-indigo-300">
+            <a id="hLink" href="#">homepage</a>
+          </li>
+          <li class="hover:text-indigo-300">
+            <a id="hLink" href="#about">about us</a>
+          </li>
+          <li class="hover:text-indigo-300">
+            <a id="hLink" href="#services">service</a>
+          </li>
+          <li class="hover:text-indigo-300">
+            <a id="hLink" href="#menus">works</a>
+          </li>
+          <li class="hover:text-indigo-300">
+            <a id="hLink" href="#contact">contact</a>
+          </li>
+          <!-- Tambahkan tombol untuk mengubah tema -->
+          <li>
+            <button
+              id="mobileMoon"
+              class="cursor-pointer hover:text-indigo-300"
+            >
+              <img class="w-5 mx-auto" src="../img/moon.png" alt="moon" />
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- </div> -->
+
+    <!-- intro content -->
+    <div
+      class="relative flex flex-col items-center justify-center min-h-screen px-6 py-10 overflow-hidden lg:flex-row bg-gradient-to-t from-indigo-200 dark:from-slate-800 dark:to-slate-900 lg:px-16"
+    >
+      <!-- Animated Text (Teks di Kiri pada layar besar, di tengah pada layar kecil) -->
+      <div class="w-full my-10 text-center lg:w-1/3 lg:text-left">
+        <div
+          class="text-xl font-bold text-gray-600 sm:text-3xl md:text-5xl lg:text-6xl xl:text-6xl"
+        >
+          <h1>
+            RENALD
+            <!-- <span class="text-gray-600">RENALD</span> -->
+          </h1>
+          <p id="text" class="text-red-500"></p>
+        </div>
+      </div>
+
+      <!-- Tengah (Lingkaran & Gambar) -->
+      <div
+        class="relative flex items-center justify-center w-full mb-10 lg:w-1/3 lg:mb-0"
+      >
+        <!-- Circle -->
+        <div
+          class="absolute w-32 h-32 bg-indigo-900 rounded-full sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-big lg:h-big -z-10"
+        ></div>
+
+        <!-- Image -->
+        <img
+          class="object-cover h-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl animate-spin"
+          src="../img/coffee.png"
+          alt="coffee"
+        />
+      </div>
+
+      <!-- Text Box (Teks di Kanan pada layar besar, di bawah pada layar kecil) -->
+      <div
+        class="flex flex-col w-full max-w-lg gap-3 p-6 mb-10 text-center bg-white rounded-md shadow-lg animate-pulse lg:w-1/3 dark:bg-slate-900 dark:shadow-slate-800 lg:text-left lg:ml-10 lg:mb-0"
+      >
+        <h1 class="mb-4 text-2xl font-bold text-indigo-900 sm:text-3xl">
+          Grind The Essentials
+        </h1>
+        <p class="mb-5 text-sm text-gray-400 sm:text-base">
+          Dibuat dari biji kopi Indonesia pilihan untuk pengalaman minum kopi
+          terbaik setiap hari. Dengan proses pembuatan yang teliti dan kualitas
+          yang baik, kami menghasilkan kopi berkualitas tinggi yang memberikan
+          pengalaman minum yang luar biasa.
+        </p>
+        <a
+          class="px-3 py-2 mx-auto text-sm font-semibold text-white transition-colors duration-300 bg-indigo-600 rounded-md sm:text-xl hover:bg-gray-200 hover:text-indigo-600 w-fit lg:mx-0"
+          href="#contact"
+        >
+          Order Now ❤️
+        </a>
+      </div>
+    </div>
+
+    <!-- about -->
+    <div id="about" class="px-10 dark:bg-slate-900">
+      <div
+        class="container flex flex-col-reverse items-center gap-20 py-10 mx-auto lg:flex-row"
+      >
+        <!-- left -->
+        <div class="relative">
+          <img
+            class="absolute top-0 left-5 h-1/4 -z-10"
+            src="../img/dots.png"
+            alt="dots"
+          />
+          <div
+            class="h-full overflow-hidden rounded-full hover:scale-105 animate-slide"
+          >
+            <img src="../img/coffee.png" alt="" />
+          </div>
+          <img
+            class="absolute bottom-0 right-0 h-1/4 -z-10"
+            src="../img/dots.png"
+            alt="dots"
+          />
+        </div>
+        <!-- right -->
+        <div class="flex flex-col gap-3 my-auto">
+          <h1 class="font-bold text-indigo-600">ABOUT US</h1>
+          <h1 class="text-3xl font-medium dark:text-white">Out Story</h1>
+          <p class="text-gray-400">
+            Let's get to know our team from the store, the neighborhood, and the
+            people who work with us!
+          </p>
+          <h2 class="font-medium text-gray-400">Our Services ❤️</h2>
+          <div class="w-full bg-gray-200 h-1.5 rounded-md">
+            <div class="w-full bg-indigo-600 h-1.5 rounded-md"></div>
+          </div>
+          <h2 class="font-medium text-gray-400">The Best Coffee Spotn ❤️</h2>
+          <div class="w-full bg-gray-200 h-1.5 rounded-md">
+            <div class="w-5/6 bg-indigo-600 h-1.5 rounded-md"></div>
+          </div>
+          <h2 class="font-medium text-gray-400">The Best Coffee Menu ❤️</h2>
+          <div class="w-full bg-gray-200 h-1.5 rounded-md">
+            <div class="w-5/6 bg-indigo-600 h-1.5 rounded-md"></div>
+          </div>
+          <h2 class="font-medium text-gray-400">
+            Assessment from Customers ❤️
+          </h2>
+          <div class="w-full bg-gray-200 h-1.5 rounded-md">
+            <div class="w-full bg-indigo-600 h-1.5 rounded-md"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- services -->
+    <div id="services" class="dark:bg-slate-900">
+      <div class="container py-20 mx-auto">
+        <!-- top -->
+        <div class="flex flex-col items-center gap-3">
+          <h1 class="font-bold text-indigo-600">SERVICE</h1>
+          <h1 class="text-3xl dark:text-white">What do I offer?</h1>
+          <p class="w-1/2 text-center text-gray-400">
+            You can order coffee easily: you can buy coffee directly at the
+            nearest store and can also be delivered to your location.
+          </p>
+        </div>
+        <!-- bottom -->
+        <div class="relative flex flex-wrap justify-around p-5 sm:p-0">
+          <!-- Animation Area -->
+          <div
+            class="absolute z-0 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
+          >
+            <div class="relative w-48 h-48">
+              <!-- Spiral Stars -->
+              <div class="absolute w-full h-full animate-spin">
+                <div
+                  class="absolute top-0 text-yellow-400 transform -translate-x-1/2 star left-1/2"
+                >
+                  ★
+                </div>
+                <div
+                  class="absolute left-0 text-pink-400 transform -translate-y-1/2 star top-1/4"
+                >
+                  ★
+                </div>
+                <div
+                  class="absolute left-0 text-blue-400 transform -translate-y-1/2 star top-3/4"
+                >
+                  ★
+                </div>
+                <div
+                  class="absolute bottom-0 text-green-400 transform -translate-x-1/2 star left-1/2"
+                >
+                  ★
+                </div>
+                <div
+                  class="absolute right-0 text-red-400 transform -translate-y-1/2 star top-3/4"
+                >
+                  ★
+                </div>
+                <div
+                  class="absolute right-0 text-purple-400 transform -translate-y-1/2 star top-1/4"
+                >
+                  ★
+                </div>
+                <div
+                  class="absolute text-orange-400 transform -translate-y-1/2 star top-1/2 left-1/4"
+                >
+                  ★
+                </div>
+                <div
+                  class="absolute text-teal-400 transform -translate-y-1/2 star top-1/2 left-3/4"
+                >
+                  ★
+                </div>
+              </div>
+              <!-- Center Glow -->
+              <div
+                class="absolute w-10 h-10 bg-yellow-400 rounded-full opacity-80 animate-pulse"
+              ></div>
+              <div
+                class="absolute right-0 w-10 h-10 rounded-full bg-rose-400 opacity-80 animate-pulse"
+              ></div>
+            </div>
+          </div>
+          <!-- card -->
+          <div
+            class="flex flex-col w-full gap-3 p-5 my-3 rounded-lg shadow-xl md:w-4/12 md:my-10"
+          >
+            <img
+              class="rounded-full w-15"
+              src="../img/pickup.jpg"
+              alt="pickup"
+            />
+            <h1 class="text-lg font-medium dark:text-white">Pick Up</h1>
+            <p class="text-gray-400">Pick up at the store without queuing.</p>
+            <a
+              class="px-3 py-2 text-sm font-semibold text-white transition-colors duration-300 bg-indigo-600 rounded-md w-fit hover:bg-gray-200 hover:text-indigo-600"
+              href=""
+              >Read More</a
+            >
+          </div>
+          <!-- card -->
+          <div
+            class="flex flex-col w-full gap-3 p-5 my-3 rounded-lg shadow-xl md:w-4/12 md:my-10"
+          >
+            <img
+              class="rounded-full w-15 bg-emerald-300"
+              src="../img/delivery.jpg"
+              alt="delivery"
+            />
+            <h1 class="text-lg font-medium dark:text-white">Delivery</h1>
+            <p class="text-gray-400">Orders delivered to your location.</p>
+            <a
+              class="px-3 py-2 text-sm font-semibold text-white transition-colors duration-300 bg-indigo-600 rounded-md w-fit hover:bg-gray-200 hover:text-indigo-600"
+              href=""
+              >Read More</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- menus -->
+    <div id="menus" class="py-20 dark:bg-slate-900">
+      <div class="container mx-auto">
+        <!-- top -->
+        <div class="flex flex-col items-center gap-3">
+          <h1 class="font-bold text-indigo-600">MENU</h1>
+          <h1 class="text-3xl dark:text-white">Iced & Hot</h1>
+          <p class="w-1/2 text-center text-gray-400">
+            A cup of coffee, whether hot or cold, is a constant companion in any
+            setting. Coffee, a caffeinated black beverage, offers a different
+            sensation when served hot or cold. Whether it's warming hot coffee
+            or refreshing cold coffee, both have their loyal fans.
+          </p>
+        </div>
+        <!-- bottom -->
+        <!-- <div class="flex flex-wrap p-5 justify-evenly sm:p-0"> -->
+        <div
+          class="grid grid-cols-1 gap-5 p-5 cursor-pointer sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+        >
+          <!-- card -->
+          <div
+            class="p-3 transition-all bg-white rounded-lg shadow-xl hover:scale-110"
+          >
+            <img
+              class="object-cover w-full h-48 rounded-lg"
+              src="../img/coffee-2.jpg"
+              alt="Espresso"
+            />
+            <h3 class="mt-3 text-lg font-semibold text-gray-800">Espresso</h3>
+            <p class="text-sm text-gray-600">Rp 25.000</p>
+            <p class="text-sm text-gray-500">
+              Kopi hitam pekat dengan aroma yang kuat, cocok untuk penikmat kopi
+              sejati.
+            </p>
+          </div>
+          <!-- card -->
+          <div
+            class="p-3 transition-all bg-white rounded-lg shadow-xl hover:scale-110"
+          >
+            <img
+              class="object-cover w-full h-48 rounded-lg"
+              src="../img/coffee-3.jpg"
+              alt="Latte"
+            />
+            <h3 class="mt-3 text-lg font-semibold text-gray-800">Latte</h3>
+            <p class="text-sm text-gray-600">Rp 30.000</p>
+            <p class="text-sm text-gray-500">
+              Perpaduan espresso dan susu dengan rasa creamy yang lembut.
+            </p>
+          </div>
+          <!-- card -->
+          <div
+            class="p-3 transition-all bg-white rounded-lg shadow-xl hover:scale-110"
+          >
+            <img
+              class="object-cover w-full h-48 rounded-lg"
+              src="../img/coffee-4.jpg"
+              alt="Cappuccino"
+            />
+            <h3 class="mt-3 text-lg font-semibold text-gray-800">Cappuccino</h3>
+            <p class="text-sm text-gray-600">Rp 30.000</p>
+            <p class="text-sm text-gray-500">
+              Kombinasi espresso, susu, dan busa dengan rasa yang seimbang.
+            </p>
+          </div>
+          <!-- card -->
+          <div
+            class="p-3 transition-all bg-white rounded-lg shadow-xl hover:scale-110"
+          >
+            <img
+              class="object-cover w-full h-48 rounded-lg"
+              src="../img/coffee-5.jpg"
+              alt="Americano"
+            />
+            <h3 class="mt-3 text-lg font-semibold text-gray-800">Americano</h3>
+            <p class="text-sm text-gray-600">Rp 25.000</p>
+            <p class="text-sm text-gray-500">
+              Espresso dengan tambahan air panas untuk rasa yang lebih ringan.
+            </p>
+          </div>
+          <!-- card -->
+          <div
+            class="p-3 transition-all bg-white rounded-lg shadow-xl hover:scale-110"
+          >
+            <img
+              class="object-cover w-full h-48 rounded-lg"
+              src="../img/matcha.jpg"
+              alt="Matcha Latte"
+            />
+            <h3 class="mt-3 text-lg font-semibold text-gray-800">
+              Matcha Latte
+            </h3>
+            <p class="text-sm text-gray-600">Rp 35.000</p>
+            <p class="text-sm text-gray-500">
+              Perpaduan matcha Jepang dan susu segar dengan rasa manis alami.
+            </p>
+          </div>
+          <!-- card -->
+          <div
+            class="p-3 transition-all bg-white rounded-lg shadow-xl hover:scale-110"
+          >
+            <img
+              class="object-cover w-full h-48 rounded-lg"
+              src="../img/matcha-2.jpg"
+              alt="Iced Matcha"
+            />
+            <h3 class="mt-3 text-lg font-semibold text-gray-800">
+              Iced Matcha
+            </h3>
+            <p class="text-sm text-gray-600">Rp 35.000</p>
+            <p class="text-sm text-gray-500">
+              Matcha dingin yang menyegarkan, sempurna untuk hari yang panas.
+            </p>
+          </div>
+          <!-- card -->
+          <div
+            class="p-3 transition-all bg-white rounded-lg shadow-xl hover:scale-110"
+          >
+            <img
+              class="object-cover w-full h-48 rounded-lg"
+              src="../img/red.jpg"
+              alt="Red Velvet Latte"
+            />
+            <h3 class="mt-3 text-lg font-semibold text-gray-800">
+              Red Velvet Latte
+            </h3>
+            <p class="text-sm text-gray-600">Rp 40.000</p>
+            <p class="text-sm text-gray-500">
+              Rasa manis dari red velvet berpadu dengan kelembutan susu.
+            </p>
+          </div>
+          <!-- card -->
+          <div
+            class="p-3 transition-all bg-white rounded-lg shadow-xl hover:scale-110"
+          >
+            <img
+              class="object-cover w-full h-48 rounded-lg"
+              src="../img/red-2.jpg"
+              alt="Iced Red Velvet"
+            />
+            <h3 class="mt-3 text-lg font-semibold text-gray-800">
+              Iced Red Velvet
+            </h3>
+            <p class="text-sm text-gray-600">Rp 40.000</p>
+            <p class="text-sm text-gray-500">
+              Minuman dingin dengan rasa red velvet yang manis dan creamy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- contact -->
+    <div id="contact" class="dark:bg-slate-900">
+      <div class="container py-20 mx-auto">
+        <!-- top -->
+        <div class="flex flex-col items-center gap-3">
+          <h1 class="font-bold text-indigo-600">CONTACT</h1>
+          <h1 class="text-3xl dark:text-white">Have a Question?</h1>
+          <p class="w-1/2 text-center text-gray-400">
+            Do you have an idea? Let's discuss it and see what we can do
+            together.
+          </p>
+        </div>
+        <!-- bottom -->
+        <form class="flex flex-col items-center gap-5 p-8 mt-5">
+          <input
+            class="w-full p-2 rounded-sm md:w-1/2 ring-1 ring-indigo-300 dark:bg-slate-800 dark:ring-0 dark:text-white"
+            type="text"
+            placeholder="Beautiful Name"
+          />
+          <input
+            class="w-full p-2 rounded-sm md:w-1/2 ring-1 ring-indigo-300 dark:bg-slate-800 dark:ring-0 dark:text-white"
+            type="email"
+            placeholder="Email"
+          />
+          <textarea
+            class="w-full p-2 border rounded-sm resize-none md:w-1/2 ring-1 ring-indigo-300 dark:bg-slate-800 dark:ring-0 dark:text-white"
+            cols="30"
+            rows="10"
+            placeholder="Message..."
+          ></textarea>
+          <button
+            class="w-full px-3 py-2 font-medium text-white transition-colors duration-300 bg-indigo-600 rounded-md cursor-pointer md:w-1/2 hover:bg-gray-200 hover:text-indigo-600"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="w-full bg-gray-800">
+      <div
+        class="container flex flex-col items-center justify-between py-5 mx-auto md:flex-row"
+      >
+        <div class="flex items-center gap-2">
+          <img
+            class="w-8 bg-gray-100 rounded-full"
+            src="../img/logo-r.png"
+            alt="logo-r"
+          />
+          <span class="text-2xl font-bold text-white">RENALD</span>
+        </div>
+
+        <span class="md:w-auto font-serif font-medium text-white mt-2 md:mt-0">
+          © 2025 Coffee Renald. Design with ♥️ by Renald.
+        </span>
+
+        <div class="flex gap-2 mt-2 md:mt-0">
+          <img
+            class="w-4 cursor-pointer"
+            src="../img/facebook.png"
+            alt="logo-facebook"
+          />
+          <img
+            class="w-4 cursor-pointer"
+            src="../img/instagram.png"
+            alt="logo-instagram"
+          />
+          <img
+            class="w-4 cursor-pointer"
+            src="../img/twitter.png"
+            alt="logo-twitter"
+          />
+          <img
+            class="w-4 cursor-pointer"
+            src="../img/linkedin.png"
+            alt="logo-linkedin"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- my script js -->
+    <script src="./app.js"></script>
+    <script src="./autotyping.js"></script>
+  </body>
+</html>
