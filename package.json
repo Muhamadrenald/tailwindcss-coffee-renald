@@ -1,0 +1,20 @@
+{
+  "name": "tailwindcss-coffee-renald",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.0",
+    "gsap": "^3.12.7",
+    "motion": "^12.0.6",
+    "remixicon": "^4.6.0",
+    "tailwindcss": "^4.0.0"
+  }
+}
