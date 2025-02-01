@@ -28,16 +28,16 @@ Clone the project
   git clone https://github.com/Muhamadrenald/tailwindcss-coffee-renald.git
 ```
 
-Initialize directory
-
-```bash
-  npm init -y
-```
-
 Go to the project directory
 
 ```bash
   cd tailwindcss-coffee-renald
+```
+
+Initialize directory
+
+```bash
+  npm init -y
 ```
 
 Install dependencies
