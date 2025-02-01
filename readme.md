@@ -25,7 +25,7 @@ http://127.0.0.1:5501/
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/Muhamadrenald/tailwindcss-coffee-renald.git
 ```
 
 Go to the project directory
